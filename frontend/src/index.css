@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --font-inter: "Inter", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body { 
+  background-color: #050505; 
+  color: #e5e7eb; 
+  font-family: var(--font-inter); 
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.hero-glow { 
+  background: radial-gradient(circle at center, rgba(34, 211, 238, 0.1) 0%, transparent 70%); 
+}
+
+.glass-card { 
+  background: rgba(255, 255, 255, 0.03); 
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.stat-value { font-family: 'Monaco', monospace; }
+
+input, select { 
+  background: rgba(255,255,255,0.05) !important; 
+  color: white !important; 
+}
+
+.nav-link:hover { color: var(--color-cyan-400); }
+
+/* Animation for the results appearing */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}

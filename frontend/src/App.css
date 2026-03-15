@@ -1,0 +1,149 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --- BACKGROUND & THEME --- */
+.app-background {
+  background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.05), transparent),
+              radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent);
+  background-color: #050505;
+}
+
+/* --- MODAL SPECIFIC FIXES --- */
+/* Overrides the index.css !important rule specifically for white background modals */
+.bg-white input {
+  background-color: #f3f4f6 !important;
+  color: #000000 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.bg-white input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(10px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+@keyframes zoomIn { 
+  from { opacity: 0; transform: scale(0.95); } 
+  to { opacity: 1; transform: scale(1); } 
+}
+
+.animate-in { animation: fadeIn 0.4s ease-out forwards; }
+.zoom-in { animation: zoomIn 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+/* --- CUSTOM INPUTS --- */
+input {
+  transition: all 0.3s ease;
+}
+input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.1);
+}
+
+/* --- FIXED DROPDOWN SYSTEM (OPAQUE & BORDERED) --- */
+
+/* Update this section in App.css */
+.dropdown-menu-container {
+  background-color: #050505 !important; 
+  background-image: none !important;
+  opacity: 1 !important;
+  
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 12px;
+  
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Ensure the header area inside also has a clear bottom border */
+.dropdown-header-area {
+  background-color: #050505 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+  padding: 0.75rem 1rem;
+}
+
+/* Standard Item Style */
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #e5e7eb !important; 
+  background-color: transparent !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 1 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #1e293b !important;
+  color: #22d3ee !important;
+}
+
+/* Danger Item Style */
+.dropdown-item-danger {
+  color: #f87171 !important;
+  font-weight: 700;
+}
+
+.dropdown-item-danger:hover {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+/* Utilities for icons inside items */
+.dropdown-item i {
+  width: 1.25rem;
+  margin-right: 0.75rem;
+  opacity: 0.8;
+}
+
+.dropdown-item:hover i {
+  opacity: 1;
+}

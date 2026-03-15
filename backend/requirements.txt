@@ -1,0 +1,38 @@
+# ── Web Framework ────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+starlette==0.37.2
+pydantic[email]==2.7.1          # EmailStr requires the [email] extra
+
+# ── Auth ─────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
+
+# ── Email ────────────────────────────────────────────────────
+fastapi-mail==1.4.1
+
+# ── Database ─────────────────────────────────────────────────
+sqlalchemy==2.0.30
+
+# ── ML / Face Recognition ────────────────────────────────────
+insightface==0.7.3
+onnxruntime==1.17.3             # CPU backend for insightface (use onnxruntime-gpu on GPU hosts)
+retinaface==0.0.13              # pip package: retina-face
+opencv-python-headless==4.9.0.80  # headless: no GUI deps needed on a server
+
+# ── Image handling ───────────────────────────────────────────
+numpy==1.26.4
+Pillow==10.3.0
+pillow-heif==0.16.0
+
+# ── Data / Analytics ─────────────────────────────────────────
+pandas==2.2.2
+scikit-learn==1.4.2
+
+# ── Misc stdlib helpers (already in stdlib, listed for clarity)
+# csv, io, os, shutil, uuid, zipfile, tempfile, threading, pickle → no install needed
+
+# ── Dev / optional ───────────────────────────────────────────
+matplotlib==3.8.4               # used in Match_faces (show_query_and_match is commented out but imported)
+python-multipart==0.0.9         # required by FastAPI for Form(...) / File(...) uploads
